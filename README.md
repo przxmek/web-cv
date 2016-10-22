@@ -1,4 +1,4 @@
-# angular-webpack
+# web-cv
 
 [![Dependency Status](https://david-dm.org/preboot/angular-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular-webpack/dev-status.svg)](https://david-dm.org/preboot/angular-webpack#info=devDependencies)
 
@@ -23,10 +23,10 @@ This workflow serves as a starting point for building Angular 1.x applications u
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular-webpack.git my-app
+$ git clone https://github.com/przxmek/web-cv.git
 
 # change directory to your app
-$ cd my-app
+$ cd web-cv
 
 # install the dependencies with npm
 $ npm install
@@ -83,7 +83,3 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
-
-# License
-
-[MIT](/LICENSE)
