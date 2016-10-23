@@ -1,10 +1,11 @@
 export default class HomeController {
     constructor() {
-        this.name = 'World';
-    }
+        this.name = 'Przemek Kuczyński';
 
-    changeName() {
-        this.name = 'angular-tips';
+        this.description = {};
+        this.description.before = 'The experienced';
+        this.description.attrs = ['UI/UX Designer', 'Web Designer', 'Photographer'];
+        this.description.after = null;
     }
 }
 

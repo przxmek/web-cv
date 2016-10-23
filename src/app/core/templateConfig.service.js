@@ -36,5 +36,6 @@ class TemplateConfig {
     }
 }
 
-angular.module('webcv.core.services')
-    .service('TemplateConfig', TemplateConfig);
+export default angular.module('webcv.core.services.templateConfig', [])
+    .service('TemplateConfig', TemplateConfig)
+    .name;
