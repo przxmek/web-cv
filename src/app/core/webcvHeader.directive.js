@@ -2,8 +2,20 @@ import angular from 'angular';
 
 function webcvHeader() {
     return {
+        restrict: 'E',
+        scope: {
+        },
         template: require('./webcvHeader.directive.html'),
         link: function (scope, element, attrs, controller, transcludeFn) {
+            scope.person = {};
+            scope.person.name = 'Przemek Kuczyński';
+            scope.person.urls = {cv: '#cv', behance: '#behance'};
+
+            scope.description = {};
+            scope.description.before = 'The experienced';
+            scope.description.attrs = ['UI/UX Designer', 'Web Designer', 'Photographer'];
+            scope.description.after = null;
+
             // set animation timing
             let animationDelay = 3500;
             // loading bar effect

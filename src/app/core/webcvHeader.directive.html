@@ -1,18 +1,20 @@
 <header>
-
     <section id="top-navigation" class="container-fluid nopadding">
         <div class="row nopadding ident ui-bg-color01">
+
             <!-- Photo -->
             <a href="#!">
                 <div class="col-md-5 col-lg-4 vc-photo">&nbsp;</div>
             </a>
             <!-- /Photo -->
+
             <div class="col-md-7 col-lg-8 vc-name nopadding">
+
                 <!-- Name-Position -->
                 <div class="row nopadding name">
-                    <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Samuel Anderson</h2></div>
+                    <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase" ng-bind="person.name"></h2></div>
                     <div class="col-md-2 nopadding name-pdf">
-                        <a href="#" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download CV.pdf"></i></a>
+                        <a ng-href="{{person.urls.cv}}" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download CV.pdf"></i></a>
                     </div>
                 </div>
                 <div class="row nopadding position">
@@ -20,24 +22,22 @@
 
                         <section class="cd-intro">
                             <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
-                                <span>The experienced </span>
-                                <span class="cd-words-wrapper">
-                                   <b class="is-visible">UI/UX Designer</b>
-                                   <b>Web Designer</b>
-                                   <b>Photographer</b>
+                                <span ng-if="description.before" ng-bind="description.before"></span>
+                                <span class="cd-words-wrahref="#"pper">
+                                    <b ng-repeat="attr in description.attrs" ng-bind="attr" ng-class="$first ? 'is-visible' : ''"></b>
                                 </span>
+                                <span ng-if="description-after" ng-bind="description.after"></span>
                             </h4>
                         </section>
 
                     </div>
                     <div class="col-md-2 nopadding pdf">
-                        <a href="#" class="hvr-sweep-to-right"><i class="flaticon-behance7" title="My Behance Portfolio"></i></a>
+                        <a ng-href="{{person.urls.cv}}" class="hvr-sweep-to-right"><i class="flaticon-behance7" title="My Behance Portfolio"></i></a>
                     </div>
                 </div>
                 <!-- /Name-Position -->
 
                 <!-- Main Navigation -->
-
                 <ul id="nav" class="row nopadding cd-side-navigation">
                     <li class="col-xs-4 col-sm-2 nopadding menuitem ui-menu-color01">
                         <a ui-sref="home" class="hvr-sweep-to-bottom"><i class="flaticon-insignia"></i><span>home</span></a>
@@ -58,19 +58,9 @@
                         <a ui-sref="blog" class="hvr-sweep-to-bottom"><i class="flaticon-pens15"></i><span>blog</span></a>
                     </li>
                 </ul>
-
                 <!-- /Main Navigation -->
 
             </div>
         </div>
     </section>
-
-    <script>
-        /* Animated Title */
-        (function () {
-
-        })();
-
-    </script>
-
 </header>
