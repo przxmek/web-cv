@@ -3,8 +3,7 @@ import angular from 'angular';
 function webcvHeader($timeout) {
     return {
         restrict: 'E',
-        scope: {
-        },
+        scope: {},
         template: require('./webcvHeader.directive.html'),
         link: function (scope, element, attrs, controller, transcludeFn) {
             scope.person = {};
