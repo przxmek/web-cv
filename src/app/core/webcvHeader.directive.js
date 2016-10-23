@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-function webcvHeader() {
+function webcvHeader($timeout) {
     return {
         restrict: 'E',
         scope: {
@@ -15,6 +15,17 @@ function webcvHeader() {
             scope.description.before = 'The experienced';
             scope.description.attrs = ['UI/UX Designer', 'Web Designer', 'Photographer'];
             scope.description.after = null;
+
+            scope.menu = {
+                items: [
+                    { title: 'home', state: 'home', colorClass: 'ui-menu-color01', iconClass: 'flaticon-insignia' },
+                    { title: 'resume', state: 'resume', colorClass: 'ui-menu-color02', iconClass: 'flaticon-graduation61' },
+                    { title: 'portfolio', state: 'portfolio', colorClass: 'ui-menu-color03', iconClass: 'flaticon-book-bag2' },
+                    { title: 'contacts', state: 'contacts', colorClass: 'ui-menu-color04', iconClass: 'flaticon-placeholders4' },
+                    { title: 'feedback', state: 'feedback', colorClass: 'ui-menu-color05', iconClass: 'flaticon-earphones18'  },
+                    { title: 'blog', state: 'blog', colorClass: 'ui-menu-color06', iconClass: 'flaticon-pens15'  }
+                ]
+            };
 
             // set animation timing
             let animationDelay = 3500;
@@ -31,7 +42,7 @@ function webcvHeader() {
             let revealDuration = 600;
             let revealAnimationDelay = 2500;
 
-            initHeadline();
+            $timeout(initHeadline);
 
 
             function initHeadline() {
@@ -202,5 +213,5 @@ function webcvHeader() {
 }
 
 export default angular.module('webcv.core.directives.webcvHeader', [])
-    .directive('webcvHeader', webcvHeader)
+    .directive('webcvHeader', ['$timeout', webcvHeader])
     .name;
