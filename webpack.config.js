@@ -30,7 +30,7 @@ module.exports = function makeWebpackConfig() {
      * Karma will set this when it's a test build
      */
     config.entry = isTest ? {} : {
-        app: './src/app/webcv.js'
+        app: './src/app/app.js'
     };
 
     /**
@@ -109,7 +109,7 @@ module.exports = function makeWebpackConfig() {
             // Rename the file using the asset hash
             // Pass along the updated reference to your code
             // You can add here any file extension you want to get copied to your output
-            test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+            test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)$/,
             loader: 'file'
         }, {
             // HTML LOADER
