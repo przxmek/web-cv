@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-function WebcvHeader() {
+function webcvHeader() {
     return {
         template: require('./webcvHeader.directive.html'),
         link: function (scope, element, attrs, controller, transcludeFn) {
@@ -190,5 +190,5 @@ function WebcvHeader() {
 }
 
 export default angular.module('webcv.core.directives.webcvHeader', [])
-    .directive('webcvHeader', WebcvHeader)
+    .directive('webcvHeader', webcvHeader)
     .name;

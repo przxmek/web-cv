@@ -477,7 +477,7 @@
         m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-40696437-13', 'auto');
+    ga('create', 'UA-48782786-4', 'auto');
     ga('send', 'pageview');
 
 })(jQuery);
